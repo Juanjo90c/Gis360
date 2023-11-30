@@ -1,0 +1,24 @@
+.contactodiv {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    text-align: right;
+    display:flex;
+    flex-direction: column;
+}
+
+.titulo_cont{
+    font-size: 20px;
+
+}
+
+.lista {
+    padding-right: 2vw;
+}
+
+.lista li {
+    font-size: 16px;
+    list-style-type: none;
+    line-height: 2;
+}
+
