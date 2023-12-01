@@ -11,20 +11,27 @@
 
 .aboutus{
     text-align: justify;
-    background-color: #acbfc9;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfd1d8;
     width:33%;
-    padding: 2vw;    
+    padding: 4vw;    
+    color:#333;
+    display: flex;
+    flex-direction: column;
 }
 
 .aboutus h2 {
-    font-weight: lighter;
-    width:100%;
-    font-size: 30px;
-    color:black
+    font-weight:lighter;
+    font-size: 20px;
+    transform: scaleX(1.75) scaleY(1.9);
+    margin-bottom: 1.5vh;
+    color:black;
+    opacity: 0.8;
 }
 
 .aboutus p{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .fototexto {
@@ -42,7 +49,7 @@
     margin-left: 8vh;
     height: 0;
     z-index: 0;
-    transition: height 3s linear(0, 0.20 25%, 0.5 50%, 0.80 75%,  1);
+    transition: height 3.5s linear(0, 0.25 25%, 0.5 50%, 0.75 75%,  1);
     border-left: 2px solid #acbfc9;
 
   }
@@ -61,18 +68,20 @@
 }
 
 .foto {
-    width: 16vh; /* Adjust the percentage as needed */
+    width: 17vh; /* Adjust the percentage as needed */
     margin-top: 2vh;
-    height: 16vh;    
+    height: 17vh;    
     margin-bottom: 2vh;
     z-index: 1;
     opacity: 0;/*  Initially set opacity to 0 */
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 1.5s forwards;
+    border: 2px solid #bfd1d8;
+    border-radius: 50%;
     /*transition: opacity 0.5s ease;  Define transition effect */
 }
 
 .foto:nth-child(1) {
-    animation-delay: 0.25s; /* Delay for the first image */
+    animation-delay: 0s; /* Delay for the first image */
   }
 
 .foto:nth-child(2) {
@@ -123,8 +132,6 @@ animation-delay: 3.5s; /* Delay for the first image */
 .descripcion:nth-child(4) {
 animation-delay: 4s; /* Delay for the first image */
 }
-
-
 
 .textos h3{
     width: 100%;

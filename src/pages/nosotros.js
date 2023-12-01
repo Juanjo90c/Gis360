@@ -65,7 +65,7 @@ function Nosotros() {
           <p>
             Somos un equipo de trabajo con experiencia de
             abordaje en múltiples campos disciplinarios, 
-            ofrecemos soluciones integrales a través de la construcción 
+            ofrecemos <b>soluciones integrales</b> a través de la construcción 
             y análisis de datos, la automatización de
             procesos y la identificación de necesidades y
             demandas específicas de cada usuario, empresa
@@ -73,8 +73,8 @@ function Nosotros() {
             medida.
             Uno de nuestros principales servicios es la capacitación de 
             equipos de trabajo para el manejo de
-            los SIG, ya que entendemos que la informacion
-            debe ser una fuente de datos publica e independiente.
+            los SIG, ya que entendemos que <b>la informacion
+            debe ser una fuente de datos publica e independiente.</b>
           </p>
         </div>
       </div>

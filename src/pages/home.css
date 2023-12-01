@@ -10,6 +10,14 @@
     /*right: 5vw; /* Align the image to the right */
   }
   
+.Roman{
+  position:absolute;
+  left: 2vw;
+  height:93vh;
+  width: auto;
+  opacity: 0.75;
+}
+
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
       animation: App-logo-spin infinite 60s linear;
