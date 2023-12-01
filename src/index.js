@@ -24,7 +24,7 @@ root.render(
       <Route path="contacto" element={<Contacto />} />
     </Route>
   </Routes>
-</HashRouter>
+</HashRouter> 
 );
 
 // If you want to start measuring performance in your app, pass a function
