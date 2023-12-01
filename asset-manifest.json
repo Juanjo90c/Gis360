@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Juanjo90c/Gis360/static/css/main.bc9455ee.css",
-    "main.js": "/Juanjo90c/Gis360/static/js/main.fa89ac75.js",
+    "main.js": "/Juanjo90c/Gis360/static/js/main.82c89359.js",
     "static/js/337.0156f156.chunk.js": "/Juanjo90c/Gis360/static/js/337.0156f156.chunk.js",
     "static/js/51.a88cabb8.chunk.js": "/Juanjo90c/Gis360/static/js/51.a88cabb8.chunk.js",
     "static/js/689.db273461.chunk.js": "/Juanjo90c/Gis360/static/js/689.db273461.chunk.js",
@@ -45,11 +45,11 @@
     "static/media/12.png": "/Juanjo90c/Gis360/static/media/12.b68e56f018aeefccd455.png",
     "index.html": "/Juanjo90c/Gis360/index.html",
     "main.bc9455ee.css.map": "/Juanjo90c/Gis360/static/css/main.bc9455ee.css.map",
-    "main.fa89ac75.js.map": "/Juanjo90c/Gis360/static/js/main.fa89ac75.js.map",
+    "main.82c89359.js.map": "/Juanjo90c/Gis360/static/js/main.82c89359.js.map",
     "787.d4aba7ab.chunk.js.map": "/Juanjo90c/Gis360/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc9455ee.css",
-    "static/js/main.fa89ac75.js"
+    "static/js/main.82c89359.js"
   ]
 }
