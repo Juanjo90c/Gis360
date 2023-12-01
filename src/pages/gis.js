@@ -1,66 +1,70 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useState, useEffect } from 'react';
 import './gis.css';
 
-class Gis extends Component {
-  state = {
-    images: [],
-    currentImageIndex: null,
-    title: '',
-    points: [],
-  };
 
-  loadImage = (imageName) => {
-    import(`./solgis/${imageName}.png`).then((image) => {
-      this.setState((prevState) => ({
-        images: [...prevState.images, image.default],
-      }));
-    });
-  };
 
-  handleImageClick = (index) => {
-    const imageName = `Image${index + 1}`;
-    const { title, points } = texts[imageName];
+const Gis = () => {
+  const [loaded, setLoaded] = useState(false);
+  const [images, setImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(null);
+  const [title, setTitle] = useState('');
+  const [points, setPoints] = useState([]);
 
-    this.setState({
-      currentImageIndex: index,
-      title: title,
-      points: points,
-    });
-  };
+  useEffect(() => {
+    // Simulate loading the line first
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 500); // Adjust the delay time as needed
 
-  componentDidMount() {
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     // Array of image names to load
     const imageNames = Array.from({ length: 9 }, (_, index) => `${index + 1}`);
     // Load images using loadImage for each image name
     imageNames.forEach((imageName) => {
-      this.loadImage(imageName);
+      loadImage(imageName);
     });
-  }
+  }, []);
 
-  render() {
-    const { images, title, points, currentImageIndex } = this.state;
-    return (
-      <Fragment>
+  const loadImage = (imageName) => {
+    import(`./solgis/${imageName}.png`).then((image) => {
+      setImages((prevImages) => [...prevImages, image.default]);
+    });
+  };
+
+  const handleImageClick = (index) => {
+    const imageName = `Image${index + 1}`;
+    const { title, points } = texts[imageName];
+    setCurrentImageIndex(index);
+    setTitle(title);
+    setPoints(points);
+  };
+
+  return (
+    <Fragment>
       <div className='divgis'>
         <div className="image-gis-container">
           {images.map((image, index) => (
-            <img key={index} src={image} alt={`Image ${index + 1}`} onClick={() => this.handleImageClick(index)}/>
+            <img key={index} src={image} alt={`Image ${index + 1}`} onClick={() => handleImageClick(index)}/>
           ))}
         </div>
         <div className = "textogis">
           <h3 className='titulogis'>{title}</h3>
           <ul className="listagis">
-          {points.map((point, index) => (
-                <li key={index} className="elementogis">
-                  {point}
-                </li>))}
+            <div className={`line3 ${loaded ? 'loaded' : ''}`}></div>
+            {points.map((point, index) => (
+              <li key={index} className="elementogis">
+                {point}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-      </Fragment>
-    );
-  }
-}
+    </Fragment>
+  );
+};
 
 export default Gis;
 

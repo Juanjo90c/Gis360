@@ -9,11 +9,11 @@ import Techs from './pages/techs'
 import Arq from './pages/arquitectura'
 import Contacto from './pages/contacto'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
   <Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
@@ -24,7 +24,7 @@ root.render(
       <Route path="contacto" element={<Contacto />} />
     </Route>
   </Routes>
-</BrowserRouter>
+</HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -13,13 +13,31 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 images per row */
     grid-template-rows: repeat(3, auto); /* 3 rows */
-    gap: 0vw; /* Gap between images */
-    
+    gap: 0vw; /* Gap between images */    
 }
 
 .textogis {
     width:33%;
     height:100%;
+}
+
+.listagis {
+    position: relative; 
+}
+
+.line3 {
+    position: absolute;
+    top: 0;
+    left: 0%; 
+    height: 0;
+    transition: height 3s linear(0, 0.35 25%, 0.6 50%,  1);
+    border-left: 50px solid #d40000;
+    display: flex;
+    align-items: flex-end;
+}
+
+.line3.loaded {
+    height: 100%;
 }
 
 .image-gis-container p {
